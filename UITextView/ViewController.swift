@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,14 @@ class ViewController: UIViewController {
         textView.backgroundColor = self.view.backgroundColor
         
         textView.layer.cornerRadius = 10
+        
+        stepper.value = 17
+        stepper.minimumValue = 10
+        stepper.maximumValue = 25
+        
+        stepper.tintColor = .white
+        stepper.backgroundColor = .gray
+        stepper.layer.cornerRadius = 5
         
         // Отслеживаем появление клавиатуры
         NotificationCenter.default.addObserver(self,
@@ -67,7 +76,15 @@ class ViewController: UIViewController {
         
         textView.scrollRangeToVisible(textView.selectedRange)
     }
-
+    
+    @IBAction func sizeFont(_ sender: UIStepper) {
+        
+        let font = textView.font?.fontName
+        let fontSize = CGFloat(sender.value)
+        
+        textView.font = UIFont(name: font!, size: fontSize)
+    }
+    
 }
 
 extension ViewController: UITextViewDelegate {

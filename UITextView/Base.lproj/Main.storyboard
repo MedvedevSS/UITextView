@@ -33,22 +33,31 @@ The appearance of the keyboard itself can be customized using the properties pro
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lrm-3d-oMM">
+                                <rect key="frame" x="300" y="103" width="94" height="32"/>
+                                <connections>
+                                    <action selector="sizeFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="ii2-bt-Whk"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="tOx-Pv-AvV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EcR-4M-W2y"/>
+                            <constraint firstItem="Lrm-3d-oMM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="HLM-gb-m5Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mI7-4o-WQv" secondAttribute="trailing" constant="20" id="fcl-21-S6o"/>
                             <constraint firstItem="mI7-4o-WQv" firstAttribute="top" secondItem="tOx-Pv-AvV" secondAttribute="bottom" constant="50" id="gIG-Me-qa1"/>
                             <constraint firstItem="mI7-4o-WQv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gO6-mc-AVw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mI7-4o-WQv" secondAttribute="bottom" constant="267" id="krh-Hq-sik"/>
                             <constraint firstItem="tOx-Pv-AvV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="pbG-ll-5I7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lrm-3d-oMM" secondAttribute="trailing" constant="20" id="t9H-YI-oIi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tOx-Pv-AvV" secondAttribute="trailing" constant="365" id="vSj-lg-7dX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomConstraint" destination="krh-Hq-sik" id="WHV-xM-GUi"/>
                         <outlet property="countLabel" destination="tOx-Pv-AvV" id="Ckw-yd-br1"/>
+                        <outlet property="stepper" destination="Lrm-3d-oMM" id="qhG-Vf-ttP"/>
                         <outlet property="textView" destination="mI7-4o-WQv" id="9dn-Xn-a09"/>
                     </connections>
                 </viewController>
