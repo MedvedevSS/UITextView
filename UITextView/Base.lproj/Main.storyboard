@@ -42,6 +42,9 @@ The appearance of the keyboard itself can be customized using the properties pro
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-E2-J70">
                                 <rect key="frame" x="197" y="377.5" width="20" height="20"/>
                             </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-g1-S0s">
+                                <rect key="frame" x="20" y="180" width="374" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -50,19 +53,23 @@ The appearance of the keyboard itself can be customized using the properties pro
                             <constraint firstItem="dvl-E2-J70" firstAttribute="centerY" secondItem="mI7-4o-WQv" secondAttribute="centerY" id="6Qq-1L-H88"/>
                             <constraint firstItem="tOx-Pv-AvV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EcR-4M-W2y"/>
                             <constraint firstItem="Lrm-3d-oMM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="HLM-gb-m5Q"/>
+                            <constraint firstItem="gDL-g1-S0s" firstAttribute="top" secondItem="mI7-4o-WQv" secondAttribute="top" id="Men-hA-MJv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mI7-4o-WQv" secondAttribute="trailing" constant="20" id="fcl-21-S6o"/>
                             <constraint firstItem="mI7-4o-WQv" firstAttribute="top" secondItem="tOx-Pv-AvV" secondAttribute="bottom" constant="50" id="gIG-Me-qa1"/>
                             <constraint firstItem="mI7-4o-WQv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gO6-mc-AVw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mI7-4o-WQv" secondAttribute="bottom" constant="267" id="krh-Hq-sik"/>
                             <constraint firstItem="tOx-Pv-AvV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="pbG-ll-5I7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lrm-3d-oMM" secondAttribute="trailing" constant="20" id="t9H-YI-oIi"/>
+                            <constraint firstItem="gDL-g1-S0s" firstAttribute="centerX" secondItem="mI7-4o-WQv" secondAttribute="centerX" id="tbL-xn-Ubr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tOx-Pv-AvV" secondAttribute="trailing" constant="365" id="vSj-lg-7dX"/>
+                            <constraint firstItem="gDL-g1-S0s" firstAttribute="width" secondItem="mI7-4o-WQv" secondAttribute="width" id="yF5-lT-85W"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="dvl-E2-J70" id="Mqz-hm-qqf"/>
                         <outlet property="bottomConstraint" destination="krh-Hq-sik" id="WHV-xM-GUi"/>
                         <outlet property="countLabel" destination="tOx-Pv-AvV" id="Ckw-yd-br1"/>
+                        <outlet property="progressView" destination="gDL-g1-S0s" id="guM-rw-geM"/>
                         <outlet property="stepper" destination="Lrm-3d-oMM" id="qhG-Vf-ttP"/>
                         <outlet property="textView" destination="mI7-4o-WQv" id="9dn-Xn-a09"/>
                     </connections>
